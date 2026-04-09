@@ -270,6 +270,8 @@ public class MainMenuController implements Initializable {
     @FXML
     public Label author2Label;
     @FXML
+    public Label author3Label;
+    @FXML
     public Label universityLabel;
 
     private void displayAuthors() {
@@ -283,5 +285,8 @@ public class MainMenuController implements Initializable {
 
         String author2 = authorsResourceBundle.getString("247027");
         author2Label.setText(author2);
+
+        String author3 = authorsResourceBundle.getString("daria");
+        author3Label.setText(author3);
     }
 }

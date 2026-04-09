@@ -10,6 +10,7 @@ public class PolishAuthorsResourceBundle extends ListResourceBundle {
                 { "university", "Politechnika Łódzka" },
                 { "247026", "Oskar Kacprzak" },
                 { "247027", "Wojciech Kapica" },
+                { "daria", "Daria Pavliuk" }
         };
 
     }
