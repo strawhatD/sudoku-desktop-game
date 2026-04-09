@@ -45,12 +45,10 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.16</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.6</version>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>
@@ -71,14 +69,6 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-        <testResources>
-            <testResource>
-                <directory>src/test/resources</directory>
-            </testResource>
-        </testResources>
-        <testSourceDirectory>src/test/java</testSourceDirectory>
-
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -98,7 +88,7 @@
                         <configuration>
                             <jdbc>
                                 <driver>org.sqlite.JDBC</driver>
-                                <url>jdbc:sqlite:JdbcDao/sudoku.db</url>
+                                <url>jdbc:sqlite:${project.basedir}/sudoku.db</url>
                             </jdbc>
                             <generator>
                                 <database>
@@ -117,23 +107,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <executions>
-                    <execution>
-                        <id>default-compile</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>default-testCompile</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <version>3.11.0</version>
             </plugin>
         </plugins>
     </build>
